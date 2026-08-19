@@ -1,20 +1,42 @@
-//modo escuro
-const botão Tema = document.getElementById("botaoTema");
+// =============================
+// MODO ESCURO
+// =============================
 
-function alternarTema(){
-  document.body.classList.toggle("escuro");
-  (document.body.classList.contains("escuro")){
-    botão Tema.textContent="Modo claro";
-  }else{
-    botão Tema.textContent="Modo escuro";
-  }
-}
-botão Tema.addEventListener("click", alternarTema);
+const botaoTema =
+document.getElementById("botaoTema");
 
-//alterar texto
-const botaoMensagem = document.getElementById("mensagem");
-const mensagem = document.getElementById("mensagem");
-function alterarTexto(){
-  mensagem.textContent = "O texto foi alterado pelo JavaScript!";
+function alternarTema() {
+
+document.body.classList.toggle("escuro");
+
+if (document.body.classList.contains("escuro")) {
+
+botaoTema.textContent = "☀ Modo claro";
+
+} else {
+
+botaoTema.textContent = "🌙 Modo escuro";
+
 }
-botão Mensagem.addEventListener("click", alterarTexto);
+}
+
+// =============================
+// ALTERAR TEXTO
+// =============================
+
+const botaoMensagem =
+document.getElementById("botaoMensagem");
+
+const mensagem =
+document.getElementById("mensagem");
+
+function alterarTexto() {
+
+mensagem.textContent =
+"O texto foi alterado pelo JavaScript!";
+
+}
+
+botaoMensagem.addEventListener("click", alterarTexto);
+
+botaoTema.addEventListener("click", alternarTema);;
